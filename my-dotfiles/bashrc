@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# bashrc to configure and initialise bash sessions (see the bash manual 
+# for details).
+#
+# Copyright (C) 2015 Thomas H. Muggleton
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  For more details,
+# see the GNU General Public License, included in the LICENSE file in the
+# root directory of this project or available at:
+# http://www.gnu.org/licenses/
+
+# Only use vimrc in home directory, i.e. don't source global definitions
+alias vim="vim -u ~/.vimrc"
+export MYVIMRC=~/.vimrc

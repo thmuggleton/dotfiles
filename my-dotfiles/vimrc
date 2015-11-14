@@ -1,0 +1,75 @@
+" vimrc to configure and initialise Vim (see the Vim manual for details).
+"
+" Copyright (C) 2015 Thomas H. Muggleton
+"
+" This program is free software: you can redistribute it and/or modify it
+" under the terms of the GNU General Public License as published by the
+" Free Software Foundation, either version 3 of the License, or (at your
+" option) any later version.
+"
+" This program is distributed in the hope that it will be useful, but
+" WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  For more details,
+" see the GNU General Public License, included in the LICENSE file in the
+" root directory of this project or available at:
+" http://www.gnu.org/licenses/
+
+set nocompatible    " Use Vim defaults
+
+" -------------------------
+" ---- Config Settings ----
+" -------------------------
+
+" --- Numbering ---
+" --- needs at least Vim 7.4 to work with both ---
+set number
+set relativenumber
+
+" --- Highlighting ---
+syntax on
+set hlsearch
+
+" --- Whitespace highlighting ---
+set list
+set listchars=tab:>>,trail:-
+highlight SpecialKey ctermfg=red
+
+" --- Allow new buffer with unwritten changes ---
+set hidden
+
+" ----------------
+" --- Mappings ---
+" ----------------
+
+" --- Use jk to exit insert or visual mode ---
+" --- taken from Learn Vimscript the Hard Way, Chapter 10, by Steve Losh ---
+inoremap jk <ESC>
+vnoremap jk <ESC>
+
+" --- Quick edit vimrc ---
+" --- taken from Learn Vimscript the Hard Way, Chapter 07, by Steve Losh ---
+nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <Leader>sv :source $MYVIMRC<CR>
+
+" --- Remove side-pane for copy and paste ---
+" --- taken from Shawn Biddle Vim Training 2 youtube video ---
+nnoremap <Leader># :set nonu norelativenumber nolist foldcolumn=0<CR>
+nnoremap <Leader>~ :set number relativenumber<CR>
+
+" --------------------
+" --- Disable keys ---
+" --------------------
+
+" --- Disable arrow keys ---
+nnoremap <UP> <Nop>
+nnoremap <DOWN> <Nop>
+nnoremap <LEFT> <Nop>
+nnoremap <RIGHT> <Nop>
+
+inoremap <UP> <Nop>
+inoremap <DOWN> <Nop>
+inoremap <LEFT> <Nop>
+inoremap <RIGHT> <Nop>
+
+" --- Disable ESC to exit insert mode ---
+inoremap <ESC> <Nop>
