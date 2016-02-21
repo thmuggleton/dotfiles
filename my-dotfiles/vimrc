@@ -1,6 +1,6 @@
 " vimrc to configure and initialise Vim (see the Vim manual for details).
 "
-" Copyright (C) 2015 Thomas H. Muggleton
+" Copyright (C) 2016 Thomas H. Muggleton
 "
 " This program is free software: you can redistribute it and/or modify it
 " under the terms of the GNU General Public License as published by the
@@ -15,6 +15,11 @@
 " http://www.gnu.org/licenses/
 
 set nocompatible    " Use Vim defaults
+
+" Source plugin configuration if Vundle is present
+if filereadable(glob('~/.vim/bundle/Vundle.vim/README.md'))
+  source $HOME/.vimrc_plugins
+endif
 
 " -------------------------
 " ---- Config Settings ----

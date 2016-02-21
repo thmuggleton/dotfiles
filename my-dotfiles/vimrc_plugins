@@ -1,0 +1,80 @@
+" Configuration of Vim plugins that can be sourced from a vimrc file used
+" to configure and initialise Vim (see the Vim manual for details).
+"
+" Copyright (C) 2016 Thomas H. Muggleton
+"
+" This program is free software: you can redistribute it and/or modify it
+" under the terms of the GNU General Public License as published by the
+" Free Software Foundation, either version 3 of the License, or (at your
+" option) any later version.
+"
+" This program is distributed in the hope that it will be useful, but
+" WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  For more details,
+" see the GNU General Public License, included in the LICENSE file in the
+" root directory of this project or available at:
+" http://www.gnu.org/licenses/
+
+" ----------------------------
+" --- Vundle configuration ---
+" ----------------------------
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/syntastic'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" --------------------------------
+" --- Individual plugin config ---
+" --------------------------------
+
+" ---------------
+" --- Airline ---
+" ---------------
+" Show all buffers on tabline
+let g:airline#extensions#tabline#enabled = 1
+
+" Define separators on tabline
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" -----------------
+" --- Syntastic ---
+" -----------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
