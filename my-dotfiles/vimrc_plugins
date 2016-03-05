@@ -57,6 +57,11 @@ filetype plugin indent on    " required
 " --- Individual plugin config ---
 " --------------------------------
 
+" -------------
+" --- CtrlP ---
+" -------------
+let g:ctrlp_working_path_mode = 'ra'
+
 " ---------------
 " --- Airline ---
 " ---------------
