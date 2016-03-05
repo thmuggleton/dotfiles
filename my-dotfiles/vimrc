@@ -51,6 +51,10 @@ set hidden
 inoremap jk <ESC>
 vnoremap jk <ESC>
 
+" --- Cycle through buffers ---
+nnoremap <TAB> :bn<CR>
+nnoremap <S-TAB> :bp<CR>
+
 " --- Quick edit vimrc ---
 " --- taken from Learn Vimscript the Hard Way, Chapter 07, by Steve Losh ---
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
