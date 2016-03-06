@@ -51,6 +51,12 @@ set hidden
 inoremap jk <ESC>
 vnoremap jk <ESC>
 
+" --- Move between windows with CTRL-(h|j|k|l) ---
+nnoremap <C-j> <C-w><C-w>
+nnoremap <C-l> <C-w><C-w>
+nnoremap <C-k> <C-w>W
+nnoremap <C-h> <C-w>W
+
 " --- Cycle through buffers ---
 nnoremap <TAB> :bn<CR>
 nnoremap <S-TAB> :bp<CR>
