@@ -19,11 +19,22 @@ set nocompatible    " Use Vim defaults
 " Source plugin configuration if Vundle is present
 if filereadable(glob('~/.vim/bundle/Vundle.vim/README.md'))
   source $HOME/.vimrc_plugins
+
+" Add native Vim status line in the absence of airline plugin
+else
+  set laststatus=2
+  set ruler
+
 endif
 
 " -------------------------
 " ---- Config Settings ----
 " -------------------------
+
+" --- Interface ---
+set hidden
+set wildmenu
+set lazyredraw
 
 " --- Numbering ---
 " --- needs at least Vim 7.4 to work with both ---
@@ -33,14 +44,27 @@ set relativenumber
 " --- Highlighting ---
 syntax on
 set hlsearch
+set incsearch
 
 " --- Whitespace highlighting ---
 set list
 set listchars=tab:>>,trail:-
 highlight SpecialKey ctermfg=red
 
-" --- Allow new buffer with unwritten changes ---
-set hidden
+" --- Indentation ---
+set autoindent
+set smartindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+" --------------------
+" --- Autocommands ---
+" --------------------
+
+" --- Set indentation based on filetype ---
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal tabstop=4
 
 " ----------------
 " --- Mappings ---

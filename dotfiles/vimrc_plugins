@@ -65,6 +65,8 @@ let g:ctrlp_working_path_mode = 'ra'
 " ---------------
 " --- Airline ---
 " ---------------
+set laststatus=2 " Always show status line
+
 " Show all buffers on tabline
 let g:airline#extensions#tabline#enabled = 1
 
