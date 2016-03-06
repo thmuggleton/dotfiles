@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Simple script to create symlinks to all files stored in the my-dotfiles
-# directory.  Script prepends a '.' to all file names and places the link in
-# the home directory of the current user.  Prompts for confirmation to replace
+# Creates symlinks to all files stored in the dotfiles directory.
+# Script prepends a '.' to all file names and places the link in the home
+# directory of the current user.  Prompts for confirmation to replace
 # corresponding files that already exist.
 #
-# Copyright (C) 2015 Thomas H. Muggleton
+# Copyright (C) 2016 Thomas H. Muggleton
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -30,11 +30,11 @@ absolute_path() {
   fi
 }
 
-# Retrieve absolute path of my-dotfiles directory
+# Retrieve absolute path of dotfiles directory
 CURRENT_DIR="$(dirname ${0})"
-DOTFILES_DIR="$(absolute_path ${CURRENT_DIR}/my-dotfiles)"
+DOTFILES_DIR="$(absolute_path ${CURRENT_DIR}/dotfiles)"
 
-# Create symlinks for all files in my-dotfiles directory
+# Create symlinks for all files in dotfiles directory
 for FILE in $(ls $DOTFILES_DIR); do
   FILEPATH=${DOTFILES_DIR}/${FILE}
   ln -is ${FILEPATH} ~/.${FILE}
