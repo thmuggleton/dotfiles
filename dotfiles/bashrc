@@ -43,8 +43,8 @@ function get_git_string {
     return 1
   fi
 
-  local modified_files=$(echo "$git_status" | grep -c '^[M ]M')
-  local staged_files=$(echo "$git_status" | grep -c '^M[M ]')
+  local modified_files=$(echo "$git_status" | grep -c '^.[MD]')
+  local staged_files=$(echo "$git_status" | grep -c '^[MARDC].')
   local untracked_files=$(echo "$git_status" | grep -c '^??')
 
   local gs_colour=${GREEN}
@@ -52,7 +52,7 @@ function get_git_string {
   if [ $staged_files -eq 0 ]; then
     local sf=''
   else
-    local sf=" $GREEN${staged_files}M"
+    local sf=" $GREEN${staged_files}S"
     local gs_colour=${YELLOW}
   fi
 
