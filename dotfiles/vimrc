@@ -35,6 +35,7 @@ endif
 set hidden
 set wildmenu
 set lazyredraw
+set backspace=indent,start
 
 " --- Numbering ---
 " --- needs at least Vim 7.4 to work with both ---
