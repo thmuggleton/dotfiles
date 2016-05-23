@@ -85,7 +85,7 @@ function prompt_command {
 
   local git_string=$(get_git_string)
 
-  PS1="${exit_string}\n${WHITE}\u@\h ${CYAN}\w ${git_string} ${WHITE}\n\$ "
+  PS1="${exit_string}\n${WHITE}\u@\h ${CYAN}\w ${git_string} ${WHITE}\n\!\$ "
 }
 
 PROMPT_COMMAND=prompt_command
@@ -96,3 +96,4 @@ export MYVIMRC=~/.vimrc
 
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
+alias ll='ls -Ahl'
