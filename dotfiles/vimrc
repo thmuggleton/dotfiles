@@ -66,6 +66,14 @@ set tabstop=2
 " --- Set indentation based on filetype ---
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal tabstop=4
+autocmd FileType make setlocal shiftwidth=4
+autocmd FileType make setlocal tabstop=4
+autocmd FileType make setlocal noexpandtab
+autocmd FileType make setlocal nolist
+
+" --- Turn on spell check for certain file types ---
+autocmd FileType markdown setlocal spell spelllang=en_gb
+autocmd FileType text setlocal spell spelllang=en_gb
 
 " ----------------
 " --- Mappings ---
