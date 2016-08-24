@@ -50,7 +50,7 @@ set incsearch
 " --- Whitespace highlighting ---
 set list
 set listchars=tab:>>,trail:-
-highlight SpecialKey ctermfg=red
+highlight SpecialKey ctermfg=magenta
 
 " --- Indentation ---
 set autoindent
