@@ -96,4 +96,5 @@ export MYVIMRC=~/.vimrc
 
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
+alias ls='ls --color=auto'
 alias ll='ls -Ahl'
