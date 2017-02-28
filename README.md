@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains configuration files for bash and vim.
+This repository contains configuration files for bash, tmux and vim.
 
 There is also a script to symlink the files in this repository to the user's
 home directory.  If files with the same name already exist, the script prompts
