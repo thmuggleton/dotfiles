@@ -44,7 +44,6 @@ set relativenumber
 
 " --- Highlighting ---
 syntax on
-set hlsearch
 set incsearch
 
 " --- Whitespace highlighting ---
