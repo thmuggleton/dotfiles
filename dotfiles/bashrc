@@ -98,3 +98,8 @@ alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 alias ls='ls --color=auto'
 alias ll='ls -Ahl'
+
+# Source overrides and configuration specific to this local environment
+if [ -f ~/.bashrc_local ]; then
+  source ~/.bashrc_local
+fi
