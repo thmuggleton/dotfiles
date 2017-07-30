@@ -55,6 +55,12 @@ call plug#end()
 " --- Individual plugin config ---
 " --------------------------------
 
+" ----------------
+" --- dispatch ---
+" ----------------
+nnoremap d<CR> :Dispatch<CR>
+autocmd FileType sh let b:dispatch = 'sh %'
+
 " -------------
 " --- CtrlP ---
 " -------------
