@@ -1,6 +1,6 @@
 " vimrc to configure and initialise Vim (see the Vim manual for details).
 "
-" Copyright (C) 2016 Thomas H. Muggleton
+" Copyright (C) 2016-2017 Thomas H. Muggleton
 "
 " This program is free software: you can redistribute it and/or modify it
 " under the terms of the GNU General Public License as published by the
@@ -17,7 +17,7 @@
 set nocompatible    " Use Vim defaults
 
 " Source plugin configuration if Vundle is present
-if filereadable(glob('~/.vim/bundle/Vundle.vim/README.md'))
+if filereadable(glob('~/.vim/autoload/plug.vim'))
   source $HOME/.vimrc_plugins
 
 " Add native Vim status line in the absence of airline plugin

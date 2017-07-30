@@ -1,7 +1,7 @@
 " Configuration of Vim plugins that can be sourced from a vimrc file used
 " to configure and initialise Vim (see the Vim manual for details).
 "
-" Copyright (C) 2016 Thomas H. Muggleton
+" Copyright (C) 2016-2017 Thomas H. Muggleton
 "
 " This program is free software: you can redistribute it and/or modify it
 " under the terms of the GNU General Public License as published by the
@@ -15,44 +15,39 @@
 " root directory of this project or available at:
 " http://www.gnu.org/licenses/
 
-" ----------------------------
-" --- Vundle configuration ---
-" ----------------------------
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'sirver/ultisnips'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" ------------------------------
+" --- vim-plug configuration ---
+" ------------------------------
+" Commands summary:
+"   - PlugInstall
+"   - PlugUpdate    update or install plugins
+"   - PlugClean     remove unused plugins
+"   - PlugUpgrade   update vim-plug
+"   - PlugStatus    view status of plugins
+"   - PlugDiff
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" For further help see either:
+"   :view ~/.vim/autoload/plug.vim
+" or
+"   https://raw.githubusercontent.com/junegunn/vim-plug/master/README.md
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#begin('~/.vim/plugged')
 
+" Requires single quotes
+
+" GitHub repositories
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/syntastic'
+Plug 'sirver/ultisnips'
+
+call plug#end()
+
+" Executed by vim-plug:
+" filetype plugin indent on
+" syntax enable
 
 " --------------------------------
 " --- Individual plugin config ---
