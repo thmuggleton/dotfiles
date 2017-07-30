@@ -36,6 +36,7 @@ set hidden
 set wildmenu
 set lazyredraw
 set backspace=indent,start
+highlight QuickFixLine ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 
 " --- Numbering ---
 " --- needs at least Vim 7.4 to work with both ---
