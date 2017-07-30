@@ -90,10 +90,14 @@ function prompt_command {
 
 PROMPT_COMMAND=prompt_command
 
+# History
+export HISTIGNORE=ls
+
 # Only use vimrc in home directory, i.e. don't source global definitions
 alias vim="vim -u ~/.vimrc"
 export MYVIMRC=~/.vimrc
 
+# Aliases
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 alias ls='ls --color=auto'
