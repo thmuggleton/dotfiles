@@ -16,7 +16,7 @@
 
 set nocompatible    " Use Vim defaults
 
-" Source plugin configuration if Vundle is present
+" Source plugin configuration if plugin manager is present
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   source $HOME/.vimrc_plugins
 
