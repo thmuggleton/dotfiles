@@ -103,21 +103,3 @@ nnoremap <Leader>sv :source $MYVIMRC<CR>
 " --- taken from Shawn Biddle Vim Training 2 youtube video ---
 nnoremap <Leader># :set nonu norelativenumber nolist foldcolumn=0<CR>
 nnoremap <Leader>~ :set number relativenumber<CR>
-
-" --------------------
-" --- Disable keys ---
-" --------------------
-
-" --- Disable arrow keys ---
-nnoremap <UP> <Nop>
-nnoremap <DOWN> <Nop>
-nnoremap <LEFT> <Nop>
-nnoremap <RIGHT> <Nop>
-
-inoremap <UP> <Nop>
-inoremap <DOWN> <Nop>
-inoremap <LEFT> <Nop>
-inoremap <RIGHT> <Nop>
-
-" --- Disable ESC to exit insert mode ---
-inoremap <ESC> <Nop>
