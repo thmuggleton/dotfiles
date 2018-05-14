@@ -4,7 +4,7 @@
 # directory of the current user.  Prompts for confirmation to replace
 # corresponding files that already exist.
 #
-# Copyright (C) 2016 Thomas H. Muggleton
+# Copyright (C) 2018 Thomas H. Muggleton
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -31,7 +31,7 @@ absolute_path() {
 }
 
 # Retrieve absolute path of dotfiles directory
-CURRENT_DIR="$(dirname ${0})"
+CURRENT_DIR="$(dirname ${BASH_SOURCE[0]})"
 DOTFILES_DIR="$(absolute_path ${CURRENT_DIR}/dotfiles)"
 
 # Create symlinks for all files in dotfiles directory
