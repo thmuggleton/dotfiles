@@ -2,7 +2,7 @@
 # bashrc to configure and initialise bash sessions (see the bash manual 
 # for details).
 #
-# Copyright (C) 2016 Thomas H. Muggleton
+# Copyright (C) 2018 Thomas H. Muggleton
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -91,7 +91,12 @@ function prompt_command {
 PROMPT_COMMAND=prompt_command
 
 # History
-export HISTIGNORE=ls
+export HISTIGNORE='ls:ll:history'
+export HISTSIZE=2000
+export HISTFILESIZE=${HISTSIZE}
+export HISTTIMEFORMAT='%F-%T  '
+shopt -s histappend
+shopt -s cmdhist
 
 # Only use vimrc in home directory, i.e. don't source global definitions
 alias vim="vim -u ~/.vimrc"
